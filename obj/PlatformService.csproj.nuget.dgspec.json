@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/eric/code/dotnet/dotnet-microservices/PlatformService.csproj": {}
+    "/home/usong/code/dotnet/PlatformService/PlatformService.csproj": {}
   },
   "projects": {
-    "/Users/eric/code/dotnet/dotnet-microservices/PlatformService.csproj": {
+    "/home/usong/code/dotnet/PlatformService/PlatformService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/eric/code/dotnet/dotnet-microservices/PlatformService.csproj",
+        "projectUniqueName": "/home/usong/code/dotnet/PlatformService/PlatformService.csproj",
         "projectName": "PlatformService",
-        "projectPath": "/Users/eric/code/dotnet/dotnet-microservices/PlatformService.csproj",
-        "packagesPath": "/Users/eric/.nuget/packages/",
-        "outputPath": "/Users/eric/code/dotnet/dotnet-microservices/obj/",
+        "projectPath": "/home/usong/code/dotnet/PlatformService/PlatformService.csproj",
+        "packagesPath": "/home/usong/.nuget/packages/",
+        "outputPath": "/home/usong/code/dotnet/PlatformService/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/eric/.nuget/NuGet/NuGet.Config"
+          "/home/usong/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -32,13 +32,7 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "10.0.100"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -86,6 +80,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.22, 8.0.22]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -94,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.122/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
