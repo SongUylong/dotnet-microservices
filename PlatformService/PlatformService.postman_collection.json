@@ -1,0 +1,493 @@
+{
+	"info": {
+		"_postman_id": "platform-service-collection",
+		"name": "PlatformService API",
+		"description": "Collection for testing PlatformService API endpoints across Local, Docker, and Kubernetes environments",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Local Testing",
+			"item": [
+				{
+					"name": "Get All Platforms",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localUrl}}/api/platforms",
+							"host": [
+								"{{localUrl}}"
+							],
+							"path": [
+								"api",
+								"platforms"
+							]
+						},
+						"description": "Retrieves all platforms from the local development environment"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Platform by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localUrl}}/api/platforms/1",
+							"host": [
+								"{{localUrl}}"
+							],
+							"path": [
+								"api",
+								"platforms",
+								"1"
+							]
+						},
+						"description": "Retrieves a specific platform by ID from local environment"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Platform - Docker",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Docker\",\n  \"publisher\": \"Docker Inc\",\n  \"cost\": \"Free\"\n}"
+						},
+						"url": {
+							"raw": "{{localUrl}}/api/platforms",
+							"host": [
+								"{{localUrl}}"
+							],
+							"path": [
+								"api",
+								"platforms"
+							]
+						},
+						"description": "Creates a new Docker platform entry in local environment"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Platform - Kubernetes",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Kubernetes\",\n  \"publisher\": \"Cloud Native Computing Foundation\",\n  \"cost\": \"Free\"\n}"
+						},
+						"url": {
+							"raw": "{{localUrl}}/api/platforms",
+							"host": [
+								"{{localUrl}}"
+							],
+							"path": [
+								"api",
+								"platforms"
+							]
+						},
+						"description": "Creates a new Kubernetes platform entry in local environment"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Platform - Azure",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Azure\",\n  \"publisher\": \"Microsoft\",\n  \"cost\": \"Pay as you go\"\n}"
+						},
+						"url": {
+							"raw": "{{localUrl}}/api/platforms",
+							"host": [
+								"{{localUrl}}"
+							],
+							"path": [
+								"api",
+								"platforms"
+							]
+						},
+						"description": "Creates a new Azure platform entry in local environment"
+					},
+					"response": []
+				}
+			],
+			"description": "Tests for local development environment (dotnet run)"
+		},
+		{
+			"name": "Docker Testing",
+			"item": [
+				{
+					"name": "Get All Platforms",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{dockerUrl}}/api/platforms",
+							"host": [
+								"{{dockerUrl}}"
+							],
+							"path": [
+								"api",
+								"platforms"
+							]
+						},
+						"description": "Retrieves all platforms from Docker container"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Platform by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{dockerUrl}}/api/platforms/1",
+							"host": [
+								"{{dockerUrl}}"
+							],
+							"path": [
+								"api",
+								"platforms",
+								"1"
+							]
+						},
+						"description": "Retrieves a specific platform by ID from Docker container"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Platform - Docker",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Docker\",\n  \"publisher\": \"Docker Inc\",\n  \"cost\": \"Free\"\n}"
+						},
+						"url": {
+							"raw": "{{dockerUrl}}/api/platforms",
+							"host": [
+								"{{dockerUrl}}"
+							],
+							"path": [
+								"api",
+								"platforms"
+							]
+						},
+						"description": "Creates a new Docker platform entry in Docker container"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Platform - Kubernetes",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Kubernetes\",\n  \"publisher\": \"Cloud Native Computing Foundation\",\n  \"cost\": \"Free\"\n}"
+						},
+						"url": {
+							"raw": "{{dockerUrl}}/api/platforms",
+							"host": [
+								"{{dockerUrl}}"
+							],
+							"path": [
+								"api",
+								"platforms"
+							]
+						},
+						"description": "Creates a new Kubernetes platform entry in Docker container"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Platform - Azure",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Azure\",\n  \"publisher\": \"Microsoft\",\n  \"cost\": \"Pay as you go\"\n}"
+						},
+						"url": {
+							"raw": "{{dockerUrl}}/api/platforms",
+							"host": [
+								"{{dockerUrl}}"
+							],
+							"path": [
+								"api",
+								"platforms"
+							]
+						},
+						"description": "Creates a new Azure platform entry in Docker container"
+					},
+					"response": []
+				},
+				{
+					"name": "Health Check",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{dockerUrl}}/api/platforms",
+							"host": [
+								"{{dockerUrl}}"
+							],
+							"path": [
+								"api",
+								"platforms"
+							]
+						},
+						"description": "Verifies Docker container is running and responding"
+					},
+					"response": []
+				}
+			],
+			"description": "Tests for Docker containerized environment (docker run)"
+		},
+		{
+			"name": "Kubernetes Testing",
+			"item": [
+				{
+					"name": "Get All Platforms",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{k8sUrl}}/api/platforms",
+							"host": [
+								"{{k8sUrl}}"
+							],
+							"path": [
+								"api",
+								"platforms"
+							]
+						},
+						"description": "Retrieves all platforms from Kubernetes deployment"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Platform by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{k8sUrl}}/api/platforms/1",
+							"host": [
+								"{{k8sUrl}}"
+							],
+							"path": [
+								"api",
+								"platforms",
+								"1"
+							]
+						},
+						"description": "Retrieves a specific platform by ID from Kubernetes deployment"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Platform - Docker",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Docker\",\n  \"publisher\": \"Docker Inc\",\n  \"cost\": \"Free\"\n}"
+						},
+						"url": {
+							"raw": "{{k8sUrl}}/api/platforms",
+							"host": [
+								"{{k8sUrl}}"
+							],
+							"path": [
+								"api",
+								"platforms"
+							]
+						},
+						"description": "Creates a new Docker platform entry in Kubernetes deployment"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Platform - Kubernetes",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Kubernetes\",\n  \"publisher\": \"Cloud Native Computing Foundation\",\n  \"cost\": \"Free\"\n}"
+						},
+						"url": {
+							"raw": "{{k8sUrl}}/api/platforms",
+							"host": [
+								"{{k8sUrl}}"
+							],
+							"path": [
+								"api",
+								"platforms"
+							]
+						},
+						"description": "Creates a new Kubernetes platform entry in Kubernetes deployment"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Platform - Azure",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Azure\",\n  \"publisher\": \"Microsoft\",\n  \"cost\": \"Pay as you go\"\n}"
+						},
+						"url": {
+							"raw": "{{k8sUrl}}/api/platforms",
+							"host": [
+								"{{k8sUrl}}"
+							],
+							"path": [
+								"api",
+								"platforms"
+							]
+						},
+						"description": "Creates a new Azure platform entry in Kubernetes deployment"
+					},
+					"response": []
+				},
+				{
+					"name": "Health Check",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{k8sUrl}}/api/platforms",
+							"host": [
+								"{{k8sUrl}}"
+							],
+							"path": [
+								"api",
+								"platforms"
+							]
+						},
+						"description": "Verifies Kubernetes service is running and responding"
+					},
+					"response": []
+				}
+			],
+			"description": "Tests for Kubernetes deployment environment (kubectl apply)"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"pm.test(\"Status code is successful\", function () {",
+					"    pm.response.to.be.success;",
+					"});",
+					"",
+					"pm.test(\"Response time is less than 500ms\", function () {",
+					"    pm.expect(pm.response.responseTime).to.be.below(500);",
+					"});"
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "localUrl",
+			"value": "http://localhost:5000",
+			"type": "string",
+			"description": "Local development server URL"
+		},
+		{
+			"key": "localUrlHttps",
+			"value": "https://localhost:5001",
+			"type": "string",
+			"description": "Local development server HTTPS URL"
+		},
+		{
+			"key": "dockerUrl",
+			"value": "http://localhost:80",
+			"type": "string",
+			"description": "Docker container URL"
+		},
+		{
+			"key": "k8sUrl",
+			"value": "http://acme.com",
+			"type": "string",
+			"description": "Kubernetes service URL (update with your ingress or NodePort URL)"
+		},
+		{
+			"key": "baseUrl",
+			"value": "{{localUrl}}",
+			"type": "string",
+			"description": "Default base URL (set to local by default)"
+		}
+	]
+}
