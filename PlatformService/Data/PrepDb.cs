@@ -8,7 +8,11 @@ namespace PlatformService.Data
         {
             using (var serviceScope = app.ApplicationServices.CreateScope())
             {
-                seedData(serviceScope.ServiceProvider.GetService<AppDbContext>());
+                var context = serviceScope.ServiceProvider.GetService<AppDbContext>();
+                if (context != null)
+                {
+                    seedData(context);
+                }
             }
         }
 
